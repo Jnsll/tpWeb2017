@@ -25,6 +25,7 @@ DnD.prototype.press = function(evt){
     this.pression = true;
     console.log(res.x);
     console.log(res.y);
+    this.interactor.onInteractionStart(this);
 };
 
 DnD.prototype.move = function(evt){
@@ -33,6 +34,7 @@ DnD.prototype.move = function(evt){
 
         console.log(res.x);
         console.log(res.y);
+        this.interactor.onInteractionUpdate(this);
 
     }
 };
@@ -43,8 +45,7 @@ DnD.prototype.release = function(evt){
         this.y_final = res.y;
         this.pression = false;
 
-        console.log(res.x);
-        console.log(res.y);
+        this .interactor.onInteractionEnd(this);
     }
 
 };
