@@ -4,14 +4,24 @@
 
 function Drawing(){
     var formes = new Array();
+
+    this.getFormes = function() {
+        return this.formes;
+    }.bind(this) ;
+
+    this.addForms = function(form) {
+        this.formes.push(form);
+    }.bind(this) ;
 }
+
 
 function Forme(epaisseur, couleur){
     this.couleur = couleur;
     this.epaisseur = epaisseur;
 }
 
-function Rectangle(largeur,hauteur, x_dep, y_dep, epaisseur, couleur ){
+
+function Rectangle(x_dep, y_dep, largeur, hauteur, epaisseur, couleur ){
     this.x_dep = x_dep;
     this.y_dep = y_dep;
     this.largeur = largeur;

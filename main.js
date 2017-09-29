@@ -14,16 +14,16 @@
 /////
 
 // Code temporaire pour tester l'affiche de la vue
-var drawing = new Drawing();
-var rec = new Rectangle(10, 20, 50, 100, 5, '#EB0243');
-rec.paint(ctx, canvas);
-var ligne = new Line(30, 30, 60, 70, 5, '#00CCC0');
-ligne.paint(ctx, canvas);
+// var drawing = new Drawing();
+// var rec = new Rectangle(50, 50, 50, 50, 10, '#EB0243');
+// rec.paint(ctx);
+// var ligne = new Line(30, 30, 60, 70, 5, '#00CCC0');
+// ligne.paint(ctx);
 // tester également Dessin.
 ////
 
 // Code final à utiliser pour manipuler Pencil.
-//var drawing = new Drawing();
-//var pencil = new Pencil(ctx, drawing, canvas);
-//drawing.paint(ctx, canvas);
+var drawing = new Drawing();
+var pencil = new Pencil(ctx, drawing, canvas);
+drawing.paint(ctx, canvas);
 

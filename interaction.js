@@ -9,7 +9,13 @@ function DnD(canvas, interactor) {
     var x_final = 0;
     var y_final = 0;
     var pression = false;
-};
+    this.canvas = canvas;
+    this.interactor = interactor;
+
+    this.canvas.addEventListener('mousedown', this.press, false);
+    this.canvas.addEventListener('mousemove', this.move, false);
+    this.canvas.addEventListener('mouseup', this.release, false);
+}
 // Developper les 3 fonctions gérant les événements
 DnD.prototype.press = function(evt){
     var res = getMousePosition(canvas, evt);
@@ -43,9 +49,7 @@ DnD.prototype.release = function(evt){
 
 };
 // Associer les fonctions précédentes aux évènements du canvas.
-canvas.addEventListener('mousedown', this.press, false);
-canvas.addEventListener('mousemove', this.move, false);
-canvas.addEventListener('mouseup', this.release, false);
+
 
 
 // Place le point de l'événement evt relativement à la position du canvas.
